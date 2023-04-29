@@ -1,0 +1,2 @@
+#!/usr/bin/perl -w
+require "C:/dev/qt-everywhere-opensource-src-4.8.4/bin/syncqt";

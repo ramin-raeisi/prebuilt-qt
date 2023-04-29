@@ -1,0 +1,6 @@
+[Paths]
+Prefix=@QT_CONF_ROOT@
+Libraries=@QT_CONF_ROOT@/lib
+Headers=@QT_CONF_ROOT@/include
+Binaries=@QT_CONF_ROOT@/bin
+Plugins=@QT_CONF_ROOT@/plugins
