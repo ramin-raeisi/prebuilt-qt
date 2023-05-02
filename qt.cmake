@@ -11,14 +11,6 @@ configure_file (
   "${CMAKE_CURRENT_LIST_DIR}/bin/qt.conf"
   )
 
-# Resolve Qt4::qtmain error/warning by 
-# defining qtmain imported library and its Qt4::qtmain alias
-add_library(qtmain STATIC IMPORTED)
-set_target_properties(qtmain PROPERTIES
-    IMPORTED_LOCATION ${CMAKE_CURRENT_LIST_DIR}/lib/qtmain.lib
-  )
-add_library(Qt4::qtmain ALIAS qtmain)
-
 include_directories(${CMAKE_CURRENT_LIST_DIR}/src)
 
 # Keep backward compatibility with former build system 
