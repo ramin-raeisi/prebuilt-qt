@@ -1,8 +1,10 @@
-# Add qt bin folder to CMAKE_PREFIX_PATH to be found
-list(APPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_LIST_DIR}/bin)
+if(${AZI_STATIC_LIBS})
+  set(_linkstr lib)
+else(${AZI_STATIC_LIBS})
+  set(_linkstr dll)
+endif(${AZI_STATIC_LIBS})
 
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(QT_ROOT ${CMAKE_CURRENT_LIST_DIR} CACHE PATH "Root to QT library")
 
 # Update qt.conf to redirect hard-coded paths to this qt folder
 set(QT_CONF_ROOT ${CMAKE_CURRENT_LIST_DIR})
